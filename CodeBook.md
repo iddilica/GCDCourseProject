@@ -75,12 +75,12 @@ For each record it is provided:
  
  This is a factor that describes the activity being performed for this observation.  There are six levels with the following labels:
  
- *WALKING
- *WALKING_UPSTAIRS
- *WALKING_DOWNSTAIRS
- *SITTING
- *STANDING
- *LAYING
+ * WALKING
+ * WALKING_UPSTAIRS
+ * WALKING_DOWNSTAIRS
+ * SITTING
+ * STANDING
+ * LAYING
  
  [3] timeBodyAccelerometerMeanX 
  
