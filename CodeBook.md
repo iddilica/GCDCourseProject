@@ -65,75 +65,350 @@ The data is then aggregated to output the mean for each value per subject and ac
 For each record it is provided:
 ======================================
 
- [1] subject                                                            
- [2] activity                                                         
- [3] timeBodyAccelerometerMeanX                                        
- [4] timeBodyAccelerometerMeanY                                         
- [5] timeBodyAccelerometerMeanZ                                        
- [6] timeBodyAccelerometerStandardDeviationX                            
- [7] timeBodyAccelerometerStandardDeviationY                           
- [8] timeBodyAccelerometerStandardDeviationZ                           
- [9] timeGravityAccelerometerMeanX                                      
-[10] timeGravityAccelerometerMeanY                                     
-[11] timeGravityAccelerometerMeanZ                                      
-[12] timeGravityAccelerometerStandardDeviationX                         
-[13] timeGravityAccelerometerStandardDeviationY                         
-[14] timeGravityAccelerometerStandardDeviationZ                        
-[15] timeBodyAccelerometerJerkMeanX                                    
-[16] timeBodyAccelerometerJerkMeanY                                  
-[17] timeBodyAccelerometerJerkMeanZ"                                     
-[18] timeBodyAccelerometerJerkStandardDeviationX                        
-[19] timeBodyAccelerometerJerkStandardDeviationY                        
-[20] timeBodyAccelerometerJerkStandardDeviationZ                        
-[21] timeBodyGyroscopeMeanX                                             
-[22] timeBodyGyroscopeMeanY                                           
-[23] timeBodyGyroscopeMeanZ                                             
-[24] timeBodyGyroscopeStandardDeviationX                               
-[25] timeBodyGyroscopeStandardDeviationY                               
-[26] timeBodyGyroscopeStandardDeviationZ                                
-[27] timeBodyGyroscopeJerkMeanX                                         
-[28] timeBodyGyroscopeJerkMeanY                                        
-[29] timeBodyGyroscopeJerkMeanZ                                        
-[30] timeBodyGyroscopeJerkStandardDeviationX                           
-[31] timeBodyGyroscopeJerkStandardDeviationY                            
-[32] timeBodyGyroscopeJerkStandardDeviationZ                            
-[33] timeBodyAccelerometerMagnitudeMean                               
-[34] timeBodyAccelerometerMagnitudeStandardDeviation                   
-[35] timeGravityAccelerometerMagnitudeMean                              
-[36] timeGravityAccelerometerMagnitudeStandardDeviation                
-[37] timeBodyAccelerometerJerkMagnitudeMean                            
-[38] timeBodyAccelerometerJerkMagnitudeStandardDeviation                
-[39] timeBodyGyroscopeMagnitudeMean"                                     
-[40] timeBodyGyroscopeMagnitudeStandardDeviation                        
-[41] timeBodyGyroscopeJerkMagnitudeMean"                                 
-[42] timeBodyGyroscopeJerkMagnitudeStandardDeviation                    
-[43] fastFourierTransformBodyAccelerometerMeanX                       
-[44] fastFourierTransformBodyAccelerometerMeanY                         
-[45] "fastFourierTransformBodyAccelerometerMeanZ"                         
-[46] "fastFourierTransformBodyAccelerometerStandardDeviationX"            
-[47] "fastFourierTransformBodyAccelerometerStandardDeviationY"            
-[48] "fastFourierTransformBodyAccelerometerStandardDeviationZ"            
-[49] "fastFourierTransformBodyAccelerometerJerkMeanX"                     
-[50] "fastFourierTransformBodyAccelerometerJerkMeanY"                     
-[51] "fastFourierTransformBodyAccelerometerJerkMeanZ"                     
-[52] "fastFourierTransformBodyAccelerometerJerkStandardDeviationX"        
-[53] "fastFourierTransformBodyAccelerometerJerkStandardDeviationY"        
-[54] "fastFourierTransformBodyAccelerometerJerkStandardDeviationZ"        
-[55] "fastFourierTransformBodyGyroscopeMeanX"                             
-[56] "fastFourierTransformBodyGyroscopeMeanY"                             
-[57] "fastFourierTransformBodyGyroscopeMeanZ"                             
-[58] "fastFourierTransformBodyGyroscopeStandardDeviationX"                
-[59] "fastFourierTransformBodyGyroscopeStandardDeviationY"                
-[60] "fastFourierTransformBodyGyroscopeStandardDeviationZ"                
-[61] "fastFourierTransformBodyAccelerometerMagnitudeMean"                 
-[62] "fastFourierTransformBodyAccelerometerMagnitudeStandardDeviation"    
-[63] "fastFourierTransformBodyAccelerometerJerkMagnitudeMean"             
-[64] "fastFourierTransformBodyAccelerometerJerkMagnitudeStandardDeviation"
-[65] "fastFourierTransformBodyGyroscopeMagnitudeMean"                     
-[66] "fastFourierTransformBodyGyroscopeMagnitudeStandardDeviation"        
-[67] "fastFourierTransformBodyGyroscopeJerkMagnitudeMean"                 
-[68] "fastFourierTransformBodyGyroscopeJerkMagnitudeStandardDeviation" 
-
+ [1] subject
+ Integer
+ This is an integer between 1 and 30 indicating an anonymised identifier for the subject of the observation.
+ 
+ [2] activity 
+ Categorised Variable
+ This is a factor that describes the activity being performed for this observation.  There are six levels with the following labels:
+ 
+ WALKING
+ WALKING_UPSTAIRS
+ WALKING_DOWNSTAIRS
+ SITTING
+ STANDING
+ LAYING
+ 
+ [3] timeBodyAccelerometerMeanX 
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body acceleration signals for the X axis.
+ Domain: time
+ 
+ [4] timeBodyAccelerometerMeanY
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body acceleration signals for the Y axis.
+ Domain: time
+ 
+ [5] timeBodyAccelerometerMeanZ   
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body acceleration signals for the Z axis.
+ Domain: time
+ 
+ [6] timeBodyAccelerometerStandardDeviationX  
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body acceleration signals for the X axis.
+ Domain: time
+ 
+ [7] timeBodyAccelerometerStandardDeviationY 
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body acceleration signals for the Y axis.
+ Domain: time
+ 
+ [8] timeBodyAccelerometerStandardDeviationZ  
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body acceleration signals for the Z axis.
+ Domain: time
+ 
+ [9] timeGravityAccelerometerMeanX
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the gravity acceleration signals for the X axis.
+ Domain: time
+ 
+[10] timeGravityAccelerometerMeanY
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body acceleration signals for the Y axis.
+ Domain: time
+ 
+[11] timeGravityAccelerometerMeanZ 
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body acceleration signals for the Z axis.
+ Domain: time
+ 
+[12] timeGravityAccelerometerStandardDeviation
+Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body acceleration signals for the X axis.
+ Domain: time
+ 
+[13] timeGravityAccelerometerStandardDeviationY  
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body acceleration signals for the Y axis.
+ Domain: time
+ 
+[14] timeGravityAccelerometerStandardDeviationZ  
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body acceleration signals for the Z axis.
+ Domain: time
+ 
+[15] timeBodyAccelerometerJerkMeanX  
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the jerk acceleration signals for the X axis.
+ Domain: time
+ 
+[16] timeBodyAccelerometerJerkMeanY
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the jerk acceleration signals for the Y axis.
+ Domain: time
+ 
+[17] timeBodyAccelerometerJerkMeanZ
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the jerk acceleration signals for the Z axis.
+ Domain: time
+ 
+[18] timeBodyAccelerometerJerkStandardDeviationX 
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the jerk acceleration signals for the X axis.
+ Domain: time
+ 
+[19] timeBodyAccelerometerJerkStandardDeviationY
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the jerk acceleration signals for the Y axis.
+ Domain: time
+ 
+[20] timeBodyAccelerometerJerkStandardDeviationZ 
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the jerk acceleration signals for the Z axis.
+ Domain: time
+ 
+[21] timeBodyGyroscopeMeanX
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body gyroscope signals for the X axis.
+ Domain: time
+ 
+[22] timeBodyGyroscopeMeanY
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body gyroscope signals for the Y axis.
+ Domain: time
+ 
+[23] timeBodyGyroscopeMeanZ 
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body gyroscope signals for the Z axis.
+ Domain: time
+ 
+[24] timeBodyGyroscopeStandardDeviationX 
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body gyroscope signals for the X axis.
+ Domain: time
+ 
+[25] timeBodyGyroscopeStandardDeviationY
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body gyroscope signals for the Y axis.
+ Domain: time
+ 
+[26] timeBodyGyroscopeStandardDeviationZ 
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body gyroscope signals for the Z axis.
+ Domain: time
+ 
+[27] timeBodyGyroscopeJerkMeanX  
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body gyroscope jerk for the X axis.
+ Domain: time
+ 
+[28] timeBodyGyroscopeJerkMeanY 
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body gyroscope jerk for the Y axis.
+ Domain: time
+ 
+[29] timeBodyGyroscopeJerkMeanZ  
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body gyroscope jerk for the Z axis.
+ Domain: time
+ 
+[30] timeBodyGyroscopeJerkStandardDeviationX 
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body gyroscope jerk for the X axis.
+ Domain: time
+ 
+[31] timeBodyGyroscopeJerkStandardDeviationY  
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body gyroscope jerk for the Y axis.
+ Domain: time
+ 
+[32] timeBodyGyroscopeJerkStandardDeviationZ 
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body gyroscope jerk for the Z axis.
+ Domain: time
+ 
+[33] timeBodyAccelerometerMagnitudeMean 
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body acceleration magnitude.
+ Domain: time
+ 
+[34] timeBodyAccelerometerMagnitudeStandardDeviation 
+Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body acceleration magnitude.
+ Domain: time
+ 
+[35] timeGravityAccelerometerMagnitudeMean
+Numeric
+ For all the observations of this subject performing this activity the averaged mean of the gravity acceleration magnitude.
+ Domain: time
+ 
+[36] timeGravityAccelerometerMagnitudeStandardDeviation 
+Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the gravity acceleration magnitude.
+ Domain: time
+ 
+[37] timeBodyAccelerometerJerkMagnitudeMean
+Numeric
+ For all the observations of this subject performing this activity the averaged mean of the jerk acceleration magnitude.
+ Domain: time
+ 
+[38] timeBodyAccelerometerJerkMagnitudeStandardDeviation 
+Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the jerk acceleration magnitude.
+ Domain: time
+ 
+[39] timeBodyGyroscopeMagnitudeMean
+Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body gyroscope magnitude.
+ Domain: time
+ 
+[40] timeBodyGyroscopeMagnitudeStandardDeviation 
+Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body gyroscope magnitude.
+ Domain: time
+ 
+[41] timeBodyGyroscopeJerkMagnitudeMean
+Numeric
+ For all the observations of this subject performing this activity the averaged mean of the jerk gyroscope magnitude.
+ Domain: time
+ 
+[42] timeBodyGyroscopeJerkMagnitudeStandardDeviation 
+Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the jerk gyroscope magnitude.
+ Domain: time
+ 
+[43] fastFourierTransformBodyAccelerometerMeanX
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body acceleration signals for the X axis.
+ Domain: frequency
+ 
+[44] fastFourierTransformBodyAccelerometerMeanY 
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body acceleration signals for the Y axis.
+ Domain: frequency
+ 
+[45] fastFourierTransformBodyAccelerometerMeanZ
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body acceleration signals for the Z axis.
+ Domain: frequency
+ 
+[46] fastFourierTransformBodyAccelerometerStandardDeviationX 
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body acceleration signals for the X axis
+ Domain: frequency
+ 
+[47] fastFourierTransformBodyAccelerometerStandardDeviationY 
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body acceleration signals for the Y axis
+ Domain: frequency
+ 
+[48] fastFourierTransformBodyAccelerometerStandardDeviationZ
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body acceleration signals for the Z axis
+ Domain: frequency
+ 
+[49] fastFourierTransformBodyAccelerometerJerkMeanX
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the jerk acceleration signals for the X axis.
+ Domain: frequency
+ 
+[50] fastFourierTransformBodyAccelerometerJerkMeanY
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the jerk acceleration signals for the Y axis.
+ Domain: frequency
+ 
+[51] fastFourierTransformBodyAccelerometerJerkMeanZ
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the jerk acceleration signals for the Z axis.
+ Domain: frequency
+ 
+[52] fastFourierTransformBodyAccelerometerJerkStandardDeviationX
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the jerk acceleration signals for the X axis.
+ Domain: frequency
+ 
+[53] fastFourierTransformBodyAccelerometerJerkStandardDeviationY
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the jerk acceleration signals for the Y axis.
+ Domain: frequency
+ 
+[54] fastFourierTransformBodyAccelerometerJerkStandardDeviationZ
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the jerk acceleration signals for the Z axis.
+ Domain: frequency
+ 
+[55] fastFourierTransformBodyGyroscopeMeanX
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body gyroscope signals for the X axis.
+ Domain: frequency
+ 
+[56] fastFourierTransformBodyGyroscopeMeanY
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body gyroscope signals for the Y axis.
+ Domain: frequency
+ 
+[57] fastFourierTransformBodyGyroscopeMeanZ
+ Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body gyroscope signals for the Z axis.
+ Domain: frequency
+ 
+[58] fastFourierTransformBodyGyroscopeStandardDeviationX
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body gyroscope signals for the X axis.
+ Domain: frequency
+ 
+[59] fastFourierTransformBodyGyroscopeStandardDeviationY
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body gyroscope signals for the Y axis.
+ Domain: frequency
+ 
+[60] fastFourierTransformBodyGyroscopeStandardDeviationZ
+ Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body gyroscope signals for the Z axis.
+ Domain: frequency
+ 
+[61] fastFourierTransformBodyAccelerometerMagnitudeMean
+Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body acceleration magnitude.
+ Domain: frequency
+ 
+[62] fastFourierTransformBodyAccelerometerMagnitudeStandardDeviation
+Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body acceleration magnitude.
+ Domain: frequency
+ 
+[63] fastFourierTransformBodyAccelerometerJerkMagnitudeMean
+Numeric
+ For all the observations of this subject performing this activity the averaged mean of the jerk acceleration magnitude.
+ Domain: frequency
+ 
+[64] fastFourierTransformBodyAccelerometerJerkMagnitudeStandardDeviation
+Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the jerk acceleration magnitude.
+ Domain: frequency
+ 
+[65] fastFourierTransformBodyGyroscopeMagnitudeMean 
+Numeric
+ For all the observations of this subject performing this activity the averaged mean of the body gyroscope magnitude.
+ Domain: frequency
+ 
+[66] fastFourierTransformBodyGyroscopeMagnitudeStandardDeviation
+Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the body gyroscope magnitude.
+ Domain: frequency
+ 
+[67] fastFourierTransformBodyGyroscopeJerkMagnitudeMean
+Numeric
+ For all the observations of this subject performing this activity the averaged mean of the jerk gyroscope magnitude.
+ Domain: frequency
+ 
+[68] fastFourierTransformBodyGyroscopeJerkMagnitudeStandardDeviation 
+Numeric
+ For all the observations of this subject performing this activity the averaged standard deviation of the jerk gyroscope magnitude.
+ Domain: frequency
 
 ## Original Data Specification
 ==================================================================
