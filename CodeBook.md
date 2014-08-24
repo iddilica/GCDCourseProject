@@ -1,7 +1,8 @@
 ==================================================================
-Human Activity Recognition Using Smartphones Aggregate Meam Data
+Human Activity Recognition Using Smartphones Aggregate Mean Data
 for Selected Measurements
 Version 1.0
+
 ==================================================================
 
 This codebook describes the variables, the data, and the transformations used to clean up the data from the original data source.
