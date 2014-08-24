@@ -1,5 +1,7 @@
 # Producing a tidy data set with the average measurements for each activity and subject from collected smartphone data
 
+This readme explains how all of the files in this repo work and how they are connected.
+
 This tidy data set of aggregate means for selected variables is computed from original data files from the Human Activity Recognition Using Smartphones Data Set: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
 ## Summary
@@ -36,57 +38,3 @@ To read the provided tidy set into R on your own computer just follow these step
 2. Open up your R console
 3. Set the working directory to the folder containing the downloaded data.
 4. Enter *data <- read.table("tidydata.txt", header = TRUE)* into your R console
-
-## Data Processing
-
-### Original Data
-
-There are  10299 observations of 563 variables in the complete original dataset but this data is split across several text files.
-
-There are three main types of file:
-
-X = contains 561 variables which are the measured features for each observation
-y = contains 1 variable which is a coded for activity being performed for each observation
-subject (s) = contains 1 variable which is a code for the subject of each observation
-
-Together X, y and s provide the 563 variables for each observation.
-
-The data files are also split into two populations each in its own sub-folder: test (2947 observations) and training (7352 observations).
-
-The data for all 10299 observations across all 563 variables is therefore spread across 6 files:
-
-train/X_train
-test/X_test
-train/y_train
-test/y_test
-train/subject_train
-test/subject_test
-
-The X files contain no column headers.  The feature names are provided in a separate file features.txt.
-
-Descriptive labels for each activity code are provided in a file called activity_labels.txt.
-
-### Intermediate Data
-
-The script run_analysis.R reads in the original data files and combines them into a single dataset.  It is assumed the original data can be found in a folder called data in the same working directory as the script.
-
-The features.txt file is read in and used to add column names to the 561 features.    
-
-The script also categorises the code for each activity using the more descriptive label from activity_labels.txt rather than an integer. 
-
-Finally, the script subsets the complete dataset to only include the subject, the activity and any columns containing the mean and standard deviation for each measurement.  This is taken to mean these two variable types based on the features info (66 variables):
-
-* mean(): Mean value
-* std(): Standard deviation
-
-This creates an intermediate dataset of 10299 observations across 68 variables.
-
-### Tidy Data
-
-The variable names of the tidy data have been amended to be both descriptive and human readable.
-
-* where an abbreviation was used in the original variable name this has been expanded
-* lower camel case has been used so that where a variable consists of a single word it appears in lower case but where a variable consists of several words each subsequent words start with an upper case.  This is to make long variable names easier ot read.
-* hyphens, brackets and any other punctuation has beem removed.
-
-The data is then aggregated to output the mean for each value per subject and activity combination.  This creates a wide tidy dataset of 180 observations (one per subject/activity combination) across 68 variables (the subject, the activity and then the mean of each selected 66 measurements).  CodeBook.md provides more information on the data.
