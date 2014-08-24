@@ -1,6 +1,5 @@
 ==================================================================
-Human Activity Recognition Using Smartphones Aggregate Mean Data
-for Selected Measurements
+# Human Activity Recognition Using Smartphones Aggregate Mean Data for Selected Measurements
 Version 1.0
 
 ==================================================================
